@@ -36,4 +36,4 @@ This code was written by SirLemaik. If you have any questions or issues with the
 This is a Currency Converter project requested by Oracle in their schoolarship called Oracle Next Education held by Alura Latam, this project was made with JAVA and Intellij as IDE.
 
 
-![Captura de Pantalla 2023-02-23 a la(s) 21 22 11(2)](https://user-images.githubusercontent.com/115129617/221078271-abf155b2-8d98-49e5-bf9a-a48eb8804da1.png)
+![Captura de Pantalla 2023-02-23 a la(s) 21 22 11(1)](https://user-images.githubusercontent.com/115129617/221080283-10b91d68-014f-41b9-acad-6e35b4881fec.png)
