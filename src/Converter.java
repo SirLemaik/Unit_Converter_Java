@@ -30,47 +30,47 @@ public class Converter {
                 case "°C to °C" -> {
                     amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la temperatura en °C:"));
                     result = amount;
-                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " °C equivalen a " + String.format("%.2f", result) + " °C.");
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " °C equivalen a " + String.format("%.3f", result) + " °C.");
                 }
                 case "°C to °F" -> {
                     amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la temperatura en °C"));
                     result = (amount *1.8)+32;
-                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " °C equivalen a " + String.format("%.2f", result) + " °F." );
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " °C equivalen a " + String.format("%.3f", result) + " °F." );
                 }
                 case "°C to K" -> {
                     amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la temperatura en °C"));
                     result =amount + 273.15;
-                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " °C equivalen a " + String.format("%.2f", result) + " K.");
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " °C equivalen a " + String.format("%.3f", result) + " K.");
                 }
                 case "°F to °C" -> {
                     amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la temperatura en °F"));
                     result = (amount - 32)/1.8;
-                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " °F equivalen a " + String.format("%.2f", result) + " °C.");
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " °F equivalen a " + String.format("%.3f", result) + " °C.");
                 }
                 case "°F to °F" -> {
                     amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la temperatura en °F"));
                     result = amount;
-                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " °F equivalen a " + String.format("%.2f", result) + " °F.");
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " °F equivalen a " + String.format("%.3f", result) + " °F.");
                 }
                 case "°F to K" -> {
                     amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la temperatura en °F"));
                     result = ((amount - 32)/1.8) + 273.15;
-                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " °F equivalen a " + String.format("%.2f", result) + " K.");
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " °F equivalen a " + String.format("%.3f", result) + " K.");
                 }
                 case "K to °C" -> {
                     amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la temperatura en K"));
                     result = amount - 273.15;
-                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " K equivalen a " + String.format("%.2f", result) + " °C.");
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " K equivalen a " + String.format("%.3f", result) + " °C.");
                 }
                 case "K to °F" -> {
                     amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la temperatura en K"));
                     result = ((amount - 273.15) * 1.8) + 32;
-                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " K equivalen a " + String.format("%.2f", result) + " °F.");
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " K equivalen a " + String.format("%.3f", result) + " °F.");
                 }
                 case "K to K" -> {
                     amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la temperatura en K"));
                     result = amount;
-                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " K equivalen a " + String.format("%.2f", result) + " K.");
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " K equivalen a " + String.format("%.3f", result) + " K.");
                 }
                 default -> JOptionPane.showMessageDialog(null, "Error, cerrando programa");
             }
@@ -79,6 +79,88 @@ public class Converter {
             Object[] surfaceUnits = {"m²", "km²", "ft²", "acre"};
             Object surfaceChoice1 = JOptionPane.showInputDialog(null,"Seleccione la unidad", "Conversor de Unidades", JOptionPane.QUESTION_MESSAGE, null, surfaceUnits, null);
             Object surfaceChoice2 = JOptionPane.showInputDialog(null,"Convertir a", "Conversor de Unidades", JOptionPane.QUESTION_MESSAGE, null, surfaceUnits,null);
+            switch (surfaceChoice1 + " to " + surfaceChoice2){
+                case "m² to m²" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la superficie en m²"));
+                    result = amount;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " m² equivalen a " + String.format("%.3f", result) + " m².");
+                }
+                case "m² to km²" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la superficie en m²"));
+                    result = amount * 0.000001;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " m² equivalen a " + String.format("%.3f", result) + " km².");
+                }
+                case "m² to ft²" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la superficie en m²"));
+                    result = amount * 10.7639;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " m² equivalen a " + String.format("%.3f", result) + " ft².");
+                }
+                case "m² to acre" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la superficie en m²"));
+                    result = amount * 0.00024711;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " m² equivalen a " + String.format("%.3f", result) + " acres.");
+                }
+                case "km² to m²" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la superficie en km²"));
+                    result = amount * 1000000;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " km² equivalen a " + String.format("%.3f", result) + " m².");
+                }
+                case "km² to km²" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la superficie en km²"));
+                    result = amount;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " km² equivalen a " + String.format("%.3f", result) + " km².");
+                }
+                case "km² to ft²" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la superficie en km²"));
+                    result = amount * 10763910;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " km² equivalen a " + String.format("%.3f", result) + " ft².");
+                }
+                case "km² to acre" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la superficie en km²"));
+                    result = amount * 247.11;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " km² equivalen a " + String.format("%.3f", result) + " acres.");
+                }
+                case "ft² to m²" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la superficie en ft²"));
+                    result = amount * 0.092903;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " ft² equivalen a " + String.format("%.3f", result) + " m².");
+                }
+                case "ft² to km²" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la superficie en ft²"));
+                    result = amount * 0.000000092903;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " ft² equivalen a " + String.format("%.3f", result) + " km².");
+                }
+                case "ft² to ft²" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la superficie en ft²"));
+                    result = amount;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " ft² equivalen a " + String.format("%.3f", result) + " ft².");
+                }
+                case "ft² to acre" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la superficie en ft²"));
+                    result = amount * 0.000022957;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " ft² equivalen a " + String.format("%.3f", result) + " acres.");
+                }
+                case "acre to m²" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la superficie en acres"));
+                    result = amount * 4046.85;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " acres equivalen a " + String.format("%.3f", result) + " m².");
+                }
+                case "acre to km²" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la superficie en acres"));
+                    result = amount * 0.00404685;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " acres equivalen a " + String.format("%.3f", result) + " km².");
+                }
+                case "acre to ft²" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la superficie en acres"));
+                    result = amount * 43559.98;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " acres equivalen a " + String.format("%.3f", result) + " ft².");
+                }
+                case "acre to acre" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la superficie en acres"));
+                    result = amount;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " acres equivalen a " + String.format("%.3f", result) + " acres.");
+                }
+            }
         }
         if (unitChoice.equals("Longitud")){
             Object[] lengthUnits = {"m", "km", "ft", "mi"};
