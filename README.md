@@ -34,3 +34,4 @@ Credits
 This code was written by SirLemaik. If you have any questions or issues with the code, please contact LonelyMurder#7595 on Discord.
 
 This is a Currency Converter project requested by Oracle in their schoolarship called Oracle Next Education held by Alura Latam, this project was made with JAVA and Intellij as IDE.
+![Captura de Pantalla 2023-02-23 a la(s) 21 22 11(1)](https://user-images.githubusercontent.com/115129617/221077460-d55fb04b-1eb9-4a5a-868a-37627361004d.png)
