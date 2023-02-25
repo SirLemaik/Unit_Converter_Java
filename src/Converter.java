@@ -166,6 +166,88 @@ public class Converter {
             Object[] lengthUnits = {"m", "km", "ft", "mi"};
             Object lengthChoice1 = JOptionPane.showInputDialog(null,"Seleccione la unidad", "Conversor de Unidades", JOptionPane.QUESTION_MESSAGE, null, lengthUnits, null);
             Object lengthChoice2 = JOptionPane.showInputDialog(null,"Convertir a", "Conversor de Unidades", JOptionPane.QUESTION_MESSAGE, null, lengthUnits,null);
+            switch (lengthChoice1 + " to " + lengthChoice2){
+                case "m to m" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud en m"));
+                    result = amount;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " m equivalen a " + String.format("%.3", result) + " m.");
+                }
+                case "m to km" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud en m"));
+                    result = amount * 0.001;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " m equivalen a " + String.format("%.3", result) + " km.");
+                }
+                case "m to ft" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud en m"));
+                    result = amount * 3.2808;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " m equivalen a " + String.format("%.3", result) + " ft.");
+                }
+                case "m to mi" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud en m"));
+                    result = amount * 0.00062137;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " m equivalen a " + String.format("%.3", result) + " mi.");
+                }
+                case "km to m" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud en km"));
+                    result = amount * 1000;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " km equivalen a " + String.format("%.3", result) + " m.");
+                }
+                case "km to km" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud en km"));
+                    result = amount;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " km equivalen a " + String.format("%.3", result) + " km.");
+                }
+                case "km to ft" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud en km"));
+                    result = amount * 3280.84;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " km equivalen a " + String.format("%.3", result) + " ft.");
+                }
+                case "km to mi" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud en km"));
+                    result = amount * 0.621371;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " km equivalen a " + String.format("%.3", result) + " mi.");
+                }
+                case "ft to m" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud en ft"));
+                    result = amount * 0.3048;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " ft equivalen a " + String.format("%.3", result) + " m.");
+                }
+                case "ft to km" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud en ft"));
+                    result = amount * 0.003048;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " ft equivalen a " + String.format("%.3", result) + " km.");
+                }
+                case "ft to ft" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud en ft"));
+                    result = amount;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " ft equivalen a " + String.format("%.3", result) + " ft.");
+                }
+                case "ft to mi" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud en ft"));
+                    result = amount * 0.00018939;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " ft equivalen a " + String.format("%.3", result) + " mi.");
+                }
+                case "mi to m" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud en mi"));
+                    result = amount * 1609.34;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " mi equivalen a " + String.format("%.3", result) + " m.");
+                }
+                case "mi to km" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud en mi"));
+                    result = amount * 1.6093;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " mi equivalen a " + String.format("%.3", result) + " km.");
+                }
+                case "mi to ft" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud en mi"));
+                    result = amount * 5280;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " mi equivalen a " + String.format("%.3", result) + " ft.");
+                }
+                case "mi to mi" -> {
+                    amount = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud en mi"));
+                    result = amount;
+                    JOptionPane.showMessageDialog(null, String.format("%.2f", amount) + " mi equivalen a " + String.format("%.3", result) + " mi.");
+                }
+            }
         }
         if (unitChoice.equals("Masa")){
             Object[] massUnits = {"gr", "kg", "lb", "oz"};
